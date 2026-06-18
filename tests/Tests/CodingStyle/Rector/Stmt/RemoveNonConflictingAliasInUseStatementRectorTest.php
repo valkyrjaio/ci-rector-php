@@ -19,15 +19,15 @@ use Rector\Testing\PHPUnit\AbstractRectorTestCase;
 
 final class RemoveNonConflictingAliasInUseStatementRectorTest extends AbstractRectorTestCase
 {
+    public static function provideData(): Iterator
+    {
+        return self::yieldFilesFromDirectory(__DIR__ . '/../../../../Fixture/RemoveNonConflictingAliasInUseStatementRector');
+    }
+
     #[DataProvider('provideData')]
     public function test(string $filePath): void
     {
         $this->doTestFile($filePath);
-    }
-
-    public static function provideData(): Iterator
-    {
-        return self::yieldFilesFromDirectory(__DIR__ . '/../../../../Fixture/RemoveNonConflictingAliasInUseStatementRector');
     }
 
     public function provideConfigFilePath(): string
