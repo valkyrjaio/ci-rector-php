@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Valkyrja Rector package.
+ * This file is part of the Valkyrja Framework package.
  *
  * (c) Melech Mizrachi <melechmizrachi@gmail.com>
  *
@@ -15,9 +15,11 @@ namespace Valkyrja\Rector\CodingStyle\Rector\Stmt;
 
 use Nette\Utils\Strings;
 use Override;
+use PhpParser\Comment;
 use PhpParser\Comment\Doc;
 use PhpParser\Node;
 use PhpParser\Node\Identifier;
+use PhpParser\Node\Name;
 use PhpParser\Node\Name\FullyQualified;
 use PhpParser\Node\Stmt\Class_;
 use PhpParser\Node\Stmt\Enum_;
@@ -32,6 +34,7 @@ use Symplify\RuleDocGenerator\Exception\PoorDocumentationException;
 use Symplify\RuleDocGenerator\ValueObject\CodeSample\CodeSample;
 use Symplify\RuleDocGenerator\ValueObject\RuleDefinition;
 
+use function array_filter;
 use function count;
 use function is_array;
 use function preg_match;
@@ -71,13 +74,21 @@ final class RemoveNonConflictingAliasInUseStatementRector extends AbstractRector
     #[Override]
     public function refactor(Node $node): FileNode|Node|Namespace_|null
     {
-        if ($node instanceof FileNode && $node->isNamespaced()) {
-            // handle in Namespace_ node
+        if ($node instanceof FileNode) {
+            if ($node->isNamespaced()) {
+                // handle in Namespace_ node
+                return null;
+            }
+
+            $stmts = $node->stmts;
+        } elseif ($node instanceof Namespace_) {
+            $stmts = $node->stmts;
+        } else {
             return null;
         }
         $hasChanged = false;
 
-        foreach ($node->stmts as $stmt) {
+        foreach ($stmts as $stmt) {
             if (! $stmt instanceof Use_) {
                 continue;
             }
@@ -98,7 +109,7 @@ final class RemoveNonConflictingAliasInUseStatementRector extends AbstractRector
             $useNameToCheck   = $stmt->uses[0]->name->toString();
             $aliasUseLastName = Strings::after($useNameToCheck, '\\', -1) ?? $useNameToCheck;
 
-            foreach ($node->stmts as $compareStmt) {
+            foreach ($stmts as $compareStmt) {
                 if (
                     (
                         $compareStmt instanceof Class_
@@ -180,31 +191,46 @@ final class RemoveNonConflictingAliasInUseStatementRector extends AbstractRector
         // Docblocks are stored in the 'comments' attribute
         $comments = $node->getAttribute('comments');
 
-        if (! empty($comments)) {
-            $newComments = [];
+        if (! is_array($comments) || $comments === []) {
+            return;
+        }
 
-            foreach ($comments as $comment) {
-                if ($comment instanceof Doc && preg_match("/(\W)$alias(\W)/", $comment->getText()) === 1) {
-                    $newComments[] = new Doc(
-                        text: preg_replace("/(\W)$alias(\W)/", "$1$className$2", $comment->getText()),
-                    );
+        $newComments = [];
 
-                    continue;
-                }
-                $newComments[] = $comment;
+        foreach ($comments as $comment) {
+            if (! $comment instanceof Comment) {
+                continue;
             }
 
-            // Set the filtered comments back to the node
-            $node->setAttribute('comments', $newComments);
+            if ($comment instanceof Doc && preg_match("/(\W)$alias(\W)/", $comment->getText()) === 1) {
+                $newText = preg_replace("/(\W)$alias(\W)/", "$1$className$2", $comment->getText());
+
+                $newComments[] = new Doc(
+                    text: $newText ?? $comment->getText(),
+                );
+
+                continue;
+            }
+
+            $newComments[] = $comment;
         }
+
+        // Set the filtered comments back to the node
+        $node->setAttribute('comments', $newComments);
     }
 
     private function modifyNodeClassName(Node $node, string $property, string $alias, string $className): void
     {
-        $NameNode = $node->$property ?? null;
+        $nameNode = $node->$property ?? null;
 
-        if ($NameNode instanceof FullyQualified && $NameNode->getAttribute('originalName')?->name === $alias) {
-            $newNameNode = new FullyQualified($NameNode->name);
+        if (! $nameNode instanceof FullyQualified) {
+            return;
+        }
+
+        $originalName = $this->getOriginalName($nameNode);
+
+        if ($originalName !== null && $originalName->name === $alias) {
+            $newNameNode = new FullyQualified($nameNode->name);
             $newNameNode->setAttribute('originalName', $className);
 
             $node->$property = $newNameNode;
@@ -221,19 +247,36 @@ final class RemoveNonConflictingAliasInUseStatementRector extends AbstractRector
 
         $newNameNodes = [];
 
-        foreach ($nameNodes as $nameNode) {
-            if ($nameNode instanceof FullyQualified && $nameNode->getAttribute('originalName')?->name === $alias) {
-                $newClass = new FullyQualified($nameNode->name);
-                $newClass->setAttribute('originalName', $className);
+        $existingNameNodes = array_filter($nameNodes, static fn (mixed $nameNode): bool => $nameNode instanceof Node);
 
-                $newNameNodes[] = $newClass;
+        foreach ($existingNameNodes as $nameNode) {
+            if ($nameNode instanceof FullyQualified) {
+                $originalName = $this->getOriginalName($nameNode);
 
-                continue;
+                if ($originalName !== null && $originalName->name === $alias) {
+                    $newClass = new FullyQualified($nameNode->name);
+                    $newClass->setAttribute('originalName', $className);
+
+                    $newNameNodes[] = $newClass;
+
+                    continue;
+                }
             }
 
             $newNameNodes[] = $nameNode;
         }
 
         $node->$property = $newNameNodes;
+    }
+
+    /**
+     * Resolve the node's "originalName" attribute when it holds a Name node.
+     */
+    private function getOriginalName(Node $node): Name|null
+    {
+        /** @var Name|null $originalName */
+        $originalName = $node->getAttribute('originalName');
+
+        return $originalName instanceof Name ? $originalName : null;
     }
 }
