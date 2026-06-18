@@ -23,4 +23,6 @@
 
     <exclude-pattern>*/.github/*</exclude-pattern>
     <exclude-pattern>*/vendor/*</exclude-pattern>
+    <!-- Rector test fixtures are intentionally non-conforming sample code -->
+    <exclude-pattern>*/tests/Fixture/*</exclude-pattern>
 </ruleset>
