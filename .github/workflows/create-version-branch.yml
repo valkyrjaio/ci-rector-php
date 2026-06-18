@@ -7,7 +7,7 @@ run-name: Create new version for upcoming major release
 jobs:
   check-outdated-dependencies:
     name: Check Outdated Dependencies
-    uses: valkyrjaio/.github/.github/workflows/_check-outdated-php-dependencies.yml@13342de3aaf7e2c581c4b2420b59ef44a7b2c3b4
+    uses: valkyrjaio/.github/.github/workflows/_check-outdated-php-dependencies.yml@fa0159e624dd543f81204bfe9419cd46e2239087
     secrets: inherit
     with:
       php-version: '8.4'
@@ -19,12 +19,12 @@ jobs:
 
   get-version:
     needs: check-outdated-dependencies
-    uses: valkyrjaio/.github/.github/workflows/_get-version.yml@13342de3aaf7e2c581c4b2420b59ef44a7b2c3b4
+    uses: valkyrjaio/.github/.github/workflows/_get-version.yml@fa0159e624dd543f81204bfe9419cd46e2239087
     secrets: inherit
 
   create:
     needs: get-version
-    uses: valkyrjaio/.github/.github/workflows/_create-version-branch.yml@13342de3aaf7e2c581c4b2420b59ef44a7b2c3b4
+    uses: valkyrjaio/.github/.github/workflows/_create-version-branch.yml@fa0159e624dd543f81204bfe9419cd46e2239087
     secrets: inherit
     with:
       version: ${{ needs.get-version.outputs.version }}
