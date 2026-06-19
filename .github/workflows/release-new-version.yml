@@ -20,7 +20,7 @@ permissions:
 
 jobs:
   release:
-    uses: valkyrjaio/.github/.github/workflows/_create-php-release.yml@e650f09198bb543d16ed72e44ac1d06028a1c7cf
+    uses: valkyrjaio/.github/.github/workflows/_create-php-release.yml@4cfdfbd49020f2e058ca90048876d05bb7819db8
     secrets: inherit
     with:
       bump: ${{ inputs.bump }}
@@ -35,7 +35,7 @@ jobs:
   update-refs:
     name: Update Workflow Refs
     needs: release
-    uses: valkyrjaio/.github/.github/workflows/_update-workflow-refs.yml@e650f09198bb543d16ed72e44ac1d06028a1c7cf
+    uses: valkyrjaio/.github/.github/workflows/_update-workflow-refs.yml@4cfdfbd49020f2e058ca90048876d05bb7819db8
     secrets: inherit
     with:
       source-repo: ${{ github.event.repository.name }}
