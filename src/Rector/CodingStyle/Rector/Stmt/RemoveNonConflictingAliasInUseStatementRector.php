@@ -110,13 +110,13 @@ final class RemoveNonConflictingAliasInUseStatementRector extends AbstractRector
             $aliasUseLastName = Strings::after($useNameToCheck, '\\', -1) ?? $useNameToCheck;
 
             foreach ($stmts as $compareStmt) {
+                $isClassLike = $compareStmt instanceof Class_
+                    || $compareStmt instanceof Interface_
+                    || $compareStmt instanceof Trait_
+                    || $compareStmt instanceof Enum_;
+
                 if (
-                    (
-                        $compareStmt instanceof Class_
-                        || $compareStmt instanceof Interface_
-                        || $compareStmt instanceof Trait_
-                        || $compareStmt instanceof Enum_
-                    )
+                    $isClassLike
                     && $compareStmt->name?->name !== null
                     // Ensure the alias's class name does not match the class/interface/trait/enum class name
                     && strtolower($compareStmt->name->name ?? '') === strtolower($aliasUseLastName)
