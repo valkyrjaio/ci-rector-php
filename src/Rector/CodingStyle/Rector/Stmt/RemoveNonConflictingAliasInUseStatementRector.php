@@ -38,6 +38,7 @@ use function array_filter;
 use function count;
 use function is_array;
 use function preg_match;
+use function preg_replace;
 use function strtolower;
 
 use const false;
