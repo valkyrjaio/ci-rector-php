@@ -1,6 +1,14 @@
 # Release Notes for 26.x
 
-## [Unreleased](https://github.com/valkyrjaio/rector/compare/v26.1.8...26.x)
+## [Unreleased](https://github.com/valkyrjaio/rector/compare/v26.1.9...26.x)
+
+## [v26.1.9](https://github.com/valkyrjaio/rector/compare/v26.1.8...v26.1.9) - 2026-07-11
+
+* [GitHub] Update ci-phpstan-php workflow refs to v26.1.10 by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-rector-php/pull/102
+* [Composer] Update composer dependencies by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-rector-php/pull/103
+* [Composer] Update composer dependencies by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-rector-php/pull/104
+* [GitHub] Update ci-phpcsfixer-php workflow refs to v26.1.11 by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-rector-php/pull/105
+* [Composer] Update composer dependencies by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-rector-php/pull/106
 
 ## [v26.1.8](https://github.com/valkyrjaio/rector/compare/v26.1.7...v26.1.8) - 2026-07-06
 
