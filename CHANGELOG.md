@@ -1,6 +1,12 @@
 # Release Notes for 26.x
 
-## [Unreleased](https://github.com/valkyrjaio/rector/compare/v26.1.9...26.x)
+## [Unreleased](https://github.com/valkyrjaio/rector/compare/v26.1.10...26.x)
+
+## [v26.1.10](https://github.com/valkyrjaio/rector/compare/v26.1.9...v26.1.10) - 2026-07-15
+
+* [Composer] Update composer dependencies by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-rector-php/pull/107
+* [GitHub] Update ci-phpcsfixer-php workflow refs to v26.1.12 by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-rector-php/pull/108
+* [Composer] Update composer dependencies by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-rector-php/pull/109
 
 ## [v26.1.9](https://github.com/valkyrjaio/rector/compare/v26.1.8...v26.1.9) - 2026-07-11
 
