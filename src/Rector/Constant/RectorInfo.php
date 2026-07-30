@@ -20,12 +20,12 @@ final class RectorInfo
      *
      * @var non-empty-string
      */
-    public const string VERSION = '26.1.11';
+    public const string VERSION = '26.2.0';
 
     /**
      * The Rector package version build datetime.
      *
      * @var non-empty-string
      */
-    public const string VERSION_BUILD_DATE_TIME = 'July 27 2026 08:55:44 MST';
+    public const string VERSION_BUILD_DATE_TIME = 'July 29 2026 22:43:06 MST';
 }
