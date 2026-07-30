@@ -5,27 +5,12 @@ on: workflow_dispatch
 run-name: Create new version for upcoming major release
 
 jobs:
-  check-outdated-dependencies:
-    name: Check Outdated Dependencies
-    uses: valkyrjaio/.github/.github/workflows/_php-check-outdated-dependencies.yml@e3e801bdc0d696988d6fc331b6cf0d806b653abd
+  create:
+    uses: valkyrjaio/.github/.github/workflows/_php-create-version-branch.yml@e3e801bdc0d696988d6fc331b6cf0d806b653abd
     secrets: inherit
     with:
-      php-version: '8.4'
       dependencies: |
         [
           {"name": "Root Packages", "command": "root-outdated-check-major-release"},
-          {"name": "Rector", "command": "rector-outdated-check-major-release"}
+          {"name": "Rector",        "command": "rector-outdated-check-major-release"}
         ]
-
-  get-version:
-    needs: check-outdated-dependencies
-    uses: valkyrjaio/.github/.github/workflows/_get-version.yml@e3e801bdc0d696988d6fc331b6cf0d806b653abd
-    secrets: inherit
-
-  create:
-    needs: get-version
-    uses: valkyrjaio/.github/.github/workflows/_create-version-branch.yml@e3e801bdc0d696988d6fc331b6cf0d806b653abd
-    secrets: inherit
-    with:
-      version: ${{ needs.get-version.outputs.version }}
-      branch: ${{ needs.get-version.outputs.branch }}
