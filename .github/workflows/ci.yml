@@ -57,5 +57,4 @@ jobs:
         src/**/*.php
         tests/**/*.php
         composer.json
-        .github/workflows/_workflow-call.yml
     secrets: inherit
