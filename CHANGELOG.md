@@ -1,6 +1,15 @@
 # Release Notes for 26.x
 
-## [Unreleased](https://github.com/valkyrjaio/rector/compare/v26.2.2...26.x)
+## [Unreleased](https://github.com/valkyrjaio/rector/compare/v26.2.3...26.x)
+
+## [v26.2.3](https://github.com/valkyrjaio/rector/compare/v26.2.2...v26.2.3) - 2026-08-01
+
+* [Workflow] ci: Update .github workflow refs to v26.18.2 by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-rector-php/pull/156
+* [Dependency] build: Update composer dependencies by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-rector-php/pull/155
+* [Workflow] ci: Expose the allow diverged input on the rebase to master workflow by [@MelechMizrachi](https://github.com/MelechMizrachi) in https://github.com/valkyrjaio/ci-rector-php/pull/157
+* [Git] chore: Ignore the .worktrees directory by [@MelechMizrachi](https://github.com/MelechMizrachi) in https://github.com/valkyrjaio/ci-rector-php/pull/158
+* [Rector] fix: Give each project its own cache directory by [@MelechMizrachi](https://github.com/MelechMizrachi) in https://github.com/valkyrjaio/ci-rector-php/pull/159
+* [Dependency] build: Update composer dependencies by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-rector-php/pull/160
 
 ## [v26.2.2](https://github.com/valkyrjaio/rector/compare/v26.2.1...v26.2.2) - 2026-08-01
 
