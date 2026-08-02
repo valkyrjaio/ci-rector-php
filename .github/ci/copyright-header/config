@@ -1,0 +1,34 @@
+#
+# This file is part of the Valkyrja Rector package.
+#
+# Copyright (c) 2016-present Melech Mizrachi
+#
+# Released under the MIT License. See LICENSE.md for details.
+#
+
+# The package this repository is. COPYRIGHT_HEADER.md in the .github repository
+# maps every repository to its own identifier.
+IDENTIFIER='Valkyrja Rector'
+
+# The files that carry no copyright header. Every other tracked file must carry
+# it, so a new file fails the check until a person adds the header or adds the
+# file here.
+EXCLUDED=(
+    # A document, a lock file, a workflow, and a configuration file hold no
+    # program code.
+    '*.md'
+    '*.json'
+    '*.lock'
+    '*.neon'
+    '*.xml'
+    '*.yml'
+    '*.dist'
+    '*.gitattributes'
+    '*.editorconfig'
+    '*.gitignore'
+
+    # A fixture that the test parses. Each file holds the input, a `-----`
+    # separator, and the output that Rector must produce. A header would become
+    # part of both, and the test compares the output against the file.
+    'tests/Fixture/*'
+)
