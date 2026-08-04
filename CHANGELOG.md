@@ -1,6 +1,13 @@
 # Release Notes for 26.x
 
-## [Unreleased](https://github.com/valkyrjaio/rector/compare/v26.3.0...26.x)
+## [Unreleased](https://github.com/valkyrjaio/rector/compare/v26.3.1...26.x)
+
+## [v26.3.1](https://github.com/valkyrjaio/rector/compare/v26.3.0...v26.3.1) - 2026-08-04
+
+* [Workflow] ci: Update .github workflow refs to v26.23.1 by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-rector-php/pull/179
+* [Readme] fix: Pin the .github document links to the version branch by [@MelechMizrachi](https://github.com/MelechMizrachi) in https://github.com/valkyrjaio/ci-rector-php/pull/180
+* [Readme] fix: Pin the art asset links to the version branch by [@MelechMizrachi](https://github.com/MelechMizrachi) in https://github.com/valkyrjaio/ci-rector-php/pull/181
+* [Dependency] build: Update composer dependencies by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-rector-php/pull/182
 
 ## [v26.3.0](https://github.com/valkyrjaio/rector/compare/v26.2.4...v26.3.0) - 2026-08-03
 
