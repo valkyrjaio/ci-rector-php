@@ -4,16 +4,16 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7cde085b50ff685a5c6e6b5046e3ec5d",
+    "content-hash": "4b31fd1f32902f0b92d1917eb84bfdcb",
     "packages": [],
     "packages-dev": [
         {
             "name": "phpstan/phpstan",
-            "version": "2.2.7",
+            "version": "2.2.8",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/692db47b9dddb0487934e5236e77d48594aef921",
-                "reference": "692db47b9dddb0487934e5236e77d48594aef921",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/e285254e60f33c21902efef4a926ca0987c06804",
+                "reference": "e285254e60f33c21902efef4a926ca0987c06804",
                 "shasum": ""
             },
             "require": {
@@ -69,20 +69,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-07-29T17:39:32+00:00"
+            "time": "2026-08-04T22:21:45+00:00"
         },
         {
             "name": "valkyrja/ci-phpstan",
-            "version": "v26.3.0",
+            "version": "v26.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/valkyrjaio/ci-phpstan-php.git",
-                "reference": "70bc71ff68c43ddfe91cb0cd6b1c7902b383b79a"
+                "reference": "d8d9e8cd50fe5e8925eadbf1c9ae2c2036381a22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/valkyrjaio/ci-phpstan-php/zipball/70bc71ff68c43ddfe91cb0cd6b1c7902b383b79a",
-                "reference": "70bc71ff68c43ddfe91cb0cd6b1c7902b383b79a",
+                "url": "https://api.github.com/repos/valkyrjaio/ci-phpstan-php/zipball/d8d9e8cd50fe5e8925eadbf1c9ae2c2036381a22",
+                "reference": "d8d9e8cd50fe5e8925eadbf1c9ae2c2036381a22",
                 "shasum": ""
             },
             "require": {
@@ -114,9 +114,9 @@
             ],
             "support": {
                 "issues": "https://github.com/valkyrjaio/ci-phpstan-php/issues",
-                "source": "https://github.com/valkyrjaio/ci-phpstan-php/tree/v26.3.0"
+                "source": "https://github.com/valkyrjaio/ci-phpstan-php/tree/v26.3.1"
             },
-            "time": "2026-08-03T16:20:16+00:00"
+            "time": "2026-08-04T16:11:19+00:00"
         }
     ],
     "aliases": [],
