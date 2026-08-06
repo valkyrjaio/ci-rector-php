@@ -1,6 +1,12 @@
 # Release Notes for 26.x
 
-## [Unreleased](https://github.com/valkyrjaio/rector/compare/v26.3.2...26.x)
+## [Unreleased](https://github.com/valkyrjaio/rector/compare/v26.3.3...26.x)
+
+## [v26.3.3](https://github.com/valkyrjaio/rector/compare/v26.3.2...v26.3.3) - 2026-08-06
+
+* [Link] fix: Pin the architecture document links to the version branch by [@MelechMizrachi](https://github.com/MelechMizrachi) in https://github.com/valkyrjaio/ci-rector-php/pull/183
+* [Workflow] ci: Update .github workflow refs to v26.24.0 by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-rector-php/pull/185
+* [Workflow] ci: Update .github workflow refs to v26.24.1 by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-rector-php/pull/186
 
 ## [v26.3.2](https://github.com/valkyrjaio/rector/compare/v26.3.1...v26.3.2) - 2026-08-05
 
