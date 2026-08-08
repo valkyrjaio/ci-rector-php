@@ -1332,16 +1332,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v8.1.2",
+            "version": "v8.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "535e18a1b8925f6c01a55b171d157ab66c2ace15"
+                "reference": "68efa2ebfd9a362951eb5a8b09fd177c66ddec24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/535e18a1b8925f6c01a55b171d157ab66c2ace15",
-                "reference": "535e18a1b8925f6c01a55b171d157ab66c2ace15",
+                "url": "https://api.github.com/repos/symfony/console/zipball/68efa2ebfd9a362951eb5a8b09fd177c66ddec24",
+                "reference": "68efa2ebfd9a362951eb5a8b09fd177c66ddec24",
                 "shasum": ""
             },
             "require": {
@@ -1408,7 +1408,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v8.1.2"
+                "source": "https://github.com/symfony/console/tree/v8.1.4"
             },
             "funding": [
                 {
@@ -1428,7 +1428,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-07-27T13:58:19+00:00"
+            "time": "2026-07-31T12:43:13+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -2846,16 +2846,16 @@
         },
         {
             "name": "valkyrja/ci-phpcsfixer",
-            "version": "v26.4.3",
+            "version": "v26.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/valkyrjaio/ci-phpcsfixer-php.git",
-                "reference": "3e455929f0b8487fe5aafa58f09e39fcf57e8fc8"
+                "reference": "52ce0fd323686c16c4d1cef6610eb6ab253bef67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/valkyrjaio/ci-phpcsfixer-php/zipball/3e455929f0b8487fe5aafa58f09e39fcf57e8fc8",
-                "reference": "3e455929f0b8487fe5aafa58f09e39fcf57e8fc8",
+                "url": "https://api.github.com/repos/valkyrjaio/ci-phpcsfixer-php/zipball/52ce0fd323686c16c4d1cef6610eb6ab253bef67",
+                "reference": "52ce0fd323686c16c4d1cef6610eb6ab253bef67",
                 "shasum": ""
             },
             "require": {
@@ -2887,9 +2887,9 @@
             ],
             "support": {
                 "issues": "https://github.com/valkyrjaio/ci-phpcsfixer-php/issues",
-                "source": "https://github.com/valkyrjaio/ci-phpcsfixer-php/tree/v26.4.3"
+                "source": "https://github.com/valkyrjaio/ci-phpcsfixer-php/tree/v26.4.4"
             },
-            "time": "2026-08-06T12:00:17+00:00"
+            "time": "2026-08-07T10:46:39+00:00"
         }
     ],
     "aliases": [],

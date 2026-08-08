@@ -2860,16 +2860,16 @@
         },
         {
             "name": "symfony/config",
-            "version": "v8.1.2",
+            "version": "v8.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "e8ee277684fa228d37795ff160b901eeda1ade5d"
+                "reference": "cb84364d9b47030c6979422d6911f9ea6603f5a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/e8ee277684fa228d37795ff160b901eeda1ade5d",
-                "reference": "e8ee277684fa228d37795ff160b901eeda1ade5d",
+                "url": "https://api.github.com/repos/symfony/config/zipball/cb84364d9b47030c6979422d6911f9ea6603f5a2",
+                "reference": "cb84364d9b47030c6979422d6911f9ea6603f5a2",
                 "shasum": ""
             },
             "require": {
@@ -2914,7 +2914,7 @@
             "description": "Helps you find, load, combine, autofill and validate configuration values of any kind",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/config/tree/v8.1.2"
+                "source": "https://github.com/symfony/config/tree/v8.1.4"
             },
             "funding": [
                 {
@@ -2934,20 +2934,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-07-22T15:42:13+00:00"
+            "time": "2026-07-31T12:43:13+00:00"
         },
         {
             "name": "symfony/console",
-            "version": "v8.1.2",
+            "version": "v8.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "535e18a1b8925f6c01a55b171d157ab66c2ace15"
+                "reference": "68efa2ebfd9a362951eb5a8b09fd177c66ddec24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/535e18a1b8925f6c01a55b171d157ab66c2ace15",
-                "reference": "535e18a1b8925f6c01a55b171d157ab66c2ace15",
+                "url": "https://api.github.com/repos/symfony/console/zipball/68efa2ebfd9a362951eb5a8b09fd177c66ddec24",
+                "reference": "68efa2ebfd9a362951eb5a8b09fd177c66ddec24",
                 "shasum": ""
             },
             "require": {
@@ -3014,7 +3014,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v8.1.2"
+                "source": "https://github.com/symfony/console/tree/v8.1.4"
             },
             "funding": [
                 {
@@ -3034,7 +3034,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-07-27T13:58:19+00:00"
+            "time": "2026-07-31T12:43:13+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -4048,16 +4048,16 @@
         },
         {
             "name": "valkyrja/ci-phpunit",
-            "version": "v26.5.2",
+            "version": "v26.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/valkyrjaio/ci-phpunit-php.git",
-                "reference": "04c0cfc5fcc96be223651266acaeee0f1b4e00c5"
+                "reference": "037472672f314f265168fd67b1b73407ff410e84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/valkyrjaio/ci-phpunit-php/zipball/04c0cfc5fcc96be223651266acaeee0f1b4e00c5",
-                "reference": "04c0cfc5fcc96be223651266acaeee0f1b4e00c5",
+                "url": "https://api.github.com/repos/valkyrjaio/ci-phpunit-php/zipball/037472672f314f265168fd67b1b73407ff410e84",
+                "reference": "037472672f314f265168fd67b1b73407ff410e84",
                 "shasum": ""
             },
             "require": {
@@ -4065,8 +4065,8 @@
                 "mockery/mockery": "^1.6.12",
                 "php": ">=8.4",
                 "php-coveralls/php-coveralls": "^2.9.1",
-                "phpunit/phpcov": "^13.0.1",
-                "phpunit/phpunit": "^13.1.14"
+                "phpunit/phpcov": "^13.1.0",
+                "phpunit/phpunit": "^13.3.0"
             },
             "type": "project",
             "autoload": {
@@ -4093,9 +4093,9 @@
             ],
             "support": {
                 "issues": "https://github.com/valkyrjaio/ci-phpunit-php/issues",
-                "source": "https://github.com/valkyrjaio/ci-phpunit-php/tree/v26.5.2"
+                "source": "https://github.com/valkyrjaio/ci-phpunit-php/tree/v26.6.0"
             },
-            "time": "2026-08-02T01:48:45+00:00"
+            "time": "2026-08-07T10:45:59+00:00"
         }
     ],
     "aliases": [],
