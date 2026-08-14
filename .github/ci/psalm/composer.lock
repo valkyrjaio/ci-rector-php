@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f9136446e3f2288430a35a8e1d8d7555",
+    "content-hash": "8e22433ff564551f83fbca43c51892b0",
     "packages": [],
     "packages-dev": [
         {
@@ -3258,16 +3258,16 @@
         },
         {
             "name": "valkyrja/ci-psalm",
-            "version": "v26.3.9",
+            "version": "v26.3.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/valkyrjaio/ci-psalm-php.git",
-                "reference": "505ef5433c3380ec4f55ff304303b50685ec676b"
+                "reference": "20364e3a084b0dfe12cfca273dbf6a60fa39d1e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/valkyrjaio/ci-psalm-php/zipball/505ef5433c3380ec4f55ff304303b50685ec676b",
-                "reference": "505ef5433c3380ec4f55ff304303b50685ec676b",
+                "url": "https://api.github.com/repos/valkyrjaio/ci-psalm-php/zipball/20364e3a084b0dfe12cfca273dbf6a60fa39d1e0",
+                "reference": "20364e3a084b0dfe12cfca273dbf6a60fa39d1e0",
                 "shasum": ""
             },
             "require": {
@@ -3299,9 +3299,9 @@
             ],
             "support": {
                 "issues": "https://github.com/valkyrjaio/ci-psalm-php/issues",
-                "source": "https://github.com/valkyrjaio/ci-psalm-php/tree/v26.3.9"
+                "source": "https://github.com/valkyrjaio/ci-psalm-php/tree/v26.3.10"
             },
-            "time": "2026-08-12T10:56:07+00:00"
+            "time": "2026-08-13T10:57:43+00:00"
         },
         {
             "name": "vimeo/psalm",
