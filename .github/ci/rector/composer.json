@@ -3,7 +3,7 @@
     "php" : ">=8.4"
   },
   "require-dev"       : {
-    "rector/rector" : "^2.6.4"
+    "rector/rector" : "^2.6.5"
   },
   "scripts"           : {
     "fix"   : "vendor/bin/rector",
