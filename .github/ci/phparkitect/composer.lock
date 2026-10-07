@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6474432d42530be40f972394d96a661c",
+    "content-hash": "a0e97e22c2331e793bdfaf95948cf5d5",
     "packages": [],
     "packages-dev": [
         {
@@ -1458,16 +1458,16 @@
         },
         {
             "name": "valkyrja/ci-phparkitect",
-            "version": "v26.7.60",
+            "version": "v26.7.61",
             "source": {
                 "type": "git",
                 "url": "https://github.com/valkyrjaio/ci-phparkitect-php.git",
-                "reference": "29d4709e4798387bc47ff6cbe112ecd2855c3035"
+                "reference": "7e9e968ccfa63711debcd76e583059e2f2ee3284"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/valkyrjaio/ci-phparkitect-php/zipball/29d4709e4798387bc47ff6cbe112ecd2855c3035",
-                "reference": "29d4709e4798387bc47ff6cbe112ecd2855c3035",
+                "url": "https://api.github.com/repos/valkyrjaio/ci-phparkitect-php/zipball/7e9e968ccfa63711debcd76e583059e2f2ee3284",
+                "reference": "7e9e968ccfa63711debcd76e583059e2f2ee3284",
                 "shasum": ""
             },
             "require": {
@@ -1499,9 +1499,9 @@
             ],
             "support": {
                 "issues": "https://github.com/valkyrjaio/ci-phparkitect-php/issues",
-                "source": "https://github.com/valkyrjaio/ci-phparkitect-php/tree/v26.7.60"
+                "source": "https://github.com/valkyrjaio/ci-phparkitect-php/tree/v26.7.61"
             },
-            "time": "2026-10-04T15:40:22+00:00"
+            "time": "2026-10-06T17:14:54+00:00"
         },
         {
             "name": "webmozart/assert",
