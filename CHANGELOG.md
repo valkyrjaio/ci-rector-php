@@ -1,6 +1,10 @@
 # Release Notes for 26.x
 
-## [Unreleased](https://github.com/valkyrjaio/rector/compare/v26.3.59...26.x)
+## [Unreleased](https://github.com/valkyrjaio/rector/compare/v26.3.60...26.x)
+
+## [v26.3.60](https://github.com/valkyrjaio/rector/compare/v26.3.59...v26.3.60) - 2026-10-07
+
+* [Dependency] build: Update composer dependencies by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-rector-php/pull/309
 
 ## [v26.3.59](https://github.com/valkyrjaio/rector/compare/v26.3.58...v26.3.59) - 2026-10-06
 
