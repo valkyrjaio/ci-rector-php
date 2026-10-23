@@ -16,7 +16,7 @@
     }
   ],
   "require"           : {
-    "php"           : ">=8.4",
+    "php"           : ">=8.4.27",
     "nette/utils"   : "^4.1.6",
     "rector/rector" : "^2.7.0"
   },
