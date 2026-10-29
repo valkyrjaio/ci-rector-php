@@ -101,20 +101,21 @@
                     "type": "thanks_dev"
                 }
             ],
-            "time": "2026-05-06T08:26:05+00:00"
+            "time": "2026-05-06T08:26:05+00:00",
+            "published-time": "2026-05-06T12:56:03+00:00"
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "2.3.11",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "c9fb3e1560c6a33eca59c9a2fcb4d9925445a0a4"
+                "reference": "e3647094ed8f0f1f67393d812b793a5143e25af3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/c9fb3e1560c6a33eca59c9a2fcb4d9925445a0a4",
-                "reference": "c9fb3e1560c6a33eca59c9a2fcb4d9925445a0a4",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/e3647094ed8f0f1f67393d812b793a5143e25af3",
+                "reference": "e3647094ed8f0f1f67393d812b793a5143e25af3",
                 "shasum": ""
             },
             "require": {
@@ -146,9 +147,10 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.3.11"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.4.0"
             },
-            "time": "2026-10-28T10:46:50+00:00"
+            "time": "2026-10-28T20:28:58+00:00",
+            "published-time": "2026-10-28T20:29:42+00:00"
         },
         {
             "name": "slevomat/coding-standard",
@@ -213,7 +215,8 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-10-28T16:34:46+00:00"
+            "time": "2026-10-28T16:34:46+00:00",
+            "published-time": "2026-10-28T16:36:09+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -297,25 +300,26 @@
                     "type": "thanks_dev"
                 }
             ],
-            "time": "2026-08-06T02:45:27+00:00"
+            "time": "2026-08-06T02:45:27+00:00",
+            "published-time": "2026-08-06T02:57:35+00:00"
         },
         {
             "name": "valkyrja/ci-phpcodesniffer",
-            "version": "v26.3.81",
+            "version": "v26.3.82",
             "source": {
                 "type": "git",
                 "url": "https://github.com/valkyrjaio/ci-phpcodesniffer-php.git",
-                "reference": "b1f8b0ba1ac41d14fd8a1d5d013e7b99466e58dc"
+                "reference": "b34699642e3a45c38e7509ad0023f2fcb4855eed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/valkyrjaio/ci-phpcodesniffer-php/zipball/b1f8b0ba1ac41d14fd8a1d5d013e7b99466e58dc",
-                "reference": "b1f8b0ba1ac41d14fd8a1d5d013e7b99466e58dc",
+                "url": "https://api.github.com/repos/valkyrjaio/ci-phpcodesniffer-php/zipball/b34699642e3a45c38e7509ad0023f2fcb4855eed",
+                "reference": "b34699642e3a45c38e7509ad0023f2fcb4855eed",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.4.27",
-                "slevomat/coding-standard": "^8.31.2",
+                "slevomat/coding-standard": "^8.31.3",
                 "squizlabs/php_codesniffer": "^4.0.4"
             },
             "type": "project",
@@ -343,9 +347,10 @@
             ],
             "support": {
                 "issues": "https://github.com/valkyrjaio/ci-phpcodesniffer-php/issues",
-                "source": "https://github.com/valkyrjaio/ci-phpcodesniffer-php/tree/v26.3.81"
+                "source": "https://github.com/valkyrjaio/ci-phpcodesniffer-php/tree/v26.3.82"
             },
-            "time": "2026-10-27T16:14:03+00:00"
+            "time": "2026-10-28T17:02:50+00:00",
+            "published-time": "2026-10-28T17:03:00+00:00"
         }
     ],
     "aliases": [],
@@ -357,5 +362,5 @@
         "php": ">=8.4.27"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.11.0"
 }

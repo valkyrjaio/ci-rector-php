@@ -4,16 +4,16 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "93e6cc58567ac3e37f1bca36b33f9fca",
+    "content-hash": "6a979c4ac163388498cc9ea4fc7dc961",
     "packages": [],
     "packages-dev": [
         {
             "name": "phpstan/phpstan",
-            "version": "2.3.3",
+            "version": "2.3.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/4b57dc8ca7456b635d1661845f44bc060b02c6b0",
-                "reference": "4b57dc8ca7456b635d1661845f44bc060b02c6b0",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/f20ce6f3c82556cfcfc086b152445a12d1d64fff",
+                "reference": "f20ce6f3c82556cfcfc086b152445a12d1d64fff",
                 "shasum": ""
             },
             "require": {
@@ -69,25 +69,26 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-10-27T14:06:26+00:00"
+            "time": "2026-10-28T22:38:53+00:00",
+            "published-time": "2026-10-28T22:39:06+00:00"
         },
         {
             "name": "rector/rector",
-            "version": "2.8.2",
+            "version": "2.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "03a365d439624872239f22911893c960cc45a6e3"
+                "reference": "12ddb68d34acb91bcf3d00302bf1c7c1b5840bd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/03a365d439624872239f22911893c960cc45a6e3",
-                "reference": "03a365d439624872239f22911893c960cc45a6e3",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/12ddb68d34acb91bcf3d00302bf1c7c1b5840bd6",
+                "reference": "12ddb68d34acb91bcf3d00302bf1c7c1b5840bd6",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.4|^8.0",
-                "phpstan/phpstan": "^2.3.3"
+                "phpstan/phpstan": "^2.3.4"
             },
             "conflict": {
                 "rector/rector-doctrine": "*",
@@ -118,7 +119,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/2.8.2"
+                "source": "https://github.com/rectorphp/rector/tree/2.8.3"
             },
             "funding": [
                 {
@@ -126,7 +127,8 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-10-28T15:59:43+00:00"
+            "time": "2026-10-29T05:51:41+00:00",
+            "published-time": "2026-10-29T05:51:47+00:00"
         }
     ],
     "aliases": [],
@@ -138,5 +140,5 @@
         "php": ">=8.4.27"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.11.0"
 }
