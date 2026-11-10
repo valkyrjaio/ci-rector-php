@@ -93,7 +93,6 @@ across multiple worker processes.
 | Rule                                            | Description                                                                                      |
 | ----------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | `AddVoidReturnTypeWhereNoReturnRector`          | Adds `: void` return type to methods that have no `return` statement                             |
-| `AddOverrideAttributeToOverriddenMethodsRector` | Adds `#[Override]` attribute to methods that override a parent                                   |
 | `ConvertStaticToSelfRector`                     | Converts `static::` to `self::` inside non-final classes where late static binding is not needed |
 | `ExplicitNullableParamTypeRector`               | Converts `?Type` param declarations to `Type\|null` union syntax                                 |
 | `NewMethodCallWithoutParenthesesRector`         | Removes unnecessary parentheses from `new` expressions used directly in method chains (PHP 8.4)  |
@@ -105,6 +104,67 @@ across multiple worker processes.
 | `StaticToSelfOnFinalClassRector`                | Converts `static::` to `self::` inside final classes                                             |
 
 #### Custom Rules
+
+##### `AddOverrideAttributeToOverriddenMethodsRector`
+
+`Valkyrja\Rector\Php83\Rector\ClassMethod\AddOverrideAttributeToOverriddenMethodsRector`
+
+Adds the `#[\Override]` attribute to a method that overrides a parent class
+method. PHP then fails when a later change removes the parent method, so a
+method that no longer overrides anything cannot stay behind unnoticed.
+
+This rule is a fork of the Rector rule of the same name. Rector deprecated its
+own rule, and the deprecated rule throws when it runs.
+
+The rule skips a method in each of these cases:
+
+- The parent method is abstract or empty, and no ancestor further up holds the method with statements
+- The parent method holds only `return null;` or only a `throw`
+- The method is a constructor or is private
+- The method is a `setUp` or `tearDown` that calls the parent method
+- The parent class has no source that Rector can parse, such as a built-in class
+
+Two options change what the rule adds the attribute to:
+
+| Option                        | Effect                                                                                                                                                             |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `ADD_TO_INTERFACE_METHODS`    | Also adds the attribute to a method that implements an interface method                                                                                            |
+| `ALLOW_OVERRIDE_EMPTY_METHOD` | Also adds the attribute when the parent method is abstract, empty, or a default, when an abstract trait method declares it, and to `__toString` from `Stringable` |
+
+`Rules::getConfig()` uses neither option.
+
+**Before:**
+
+```
+class ParentClass
+{
+    public function run(): void
+    {
+        echo 'parent';
+    }
+}
+
+final class ChildClass extends ParentClass
+{
+    public function run(): void
+    {
+        echo 'child';
+    }
+}
+```
+
+**After:**
+
+```
+final class ChildClass extends ParentClass
+{
+    #[\Override]
+    public function run(): void
+    {
+        echo 'child';
+    }
+}
+```
 
 ##### `RemoveNonConflictingAliasInUseStatementRector`
 
