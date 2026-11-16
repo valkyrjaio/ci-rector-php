@@ -21,8 +21,8 @@ use PhpParser\Node\Stmt\Nop;
 use PhpParser\Node\Stmt\Use_;
 use PhpParser\Node\UseItem;
 use Rector\PhpParser\Node\FileNode;
+use Rector\RuleDoc\RuleDefinition;
 use stdClass;
-use Symplify\RuleDocGenerator\ValueObject\RuleDefinition;
 use Valkyrja\Rector\CodingStyle\Rector\Stmt\RemoveNonConflictingAliasInUseStatementRector;
 use Valkyrja\Rector\Tests\Abstract\RectorTestCase;
 
