@@ -13,10 +13,23 @@ declare(strict_types=1);
 namespace Valkyrja\Rector\Tests\Unit;
 
 use FilesystemIterator;
+use Rector\CodeQuality\Rector\Class_\ConvertStaticToSelfRector;
+use Rector\CodingStyle\Rector\Stmt\RemoveUselessAliasInUseStatementRector;
+use Rector\CodingStyle\Rector\Use_\SeparateMultiUseImportsRector;
 use Rector\Configuration\RectorConfigBuilder;
+use Rector\DeadCode\Rector\ClassMethod\RemoveUselessParamTagRector;
+use Rector\DeadCode\Rector\ClassMethod\RemoveUselessReturnTagRector;
+use Rector\DeadCode\Rector\StaticCall\RemoveParentCallWithoutParentRector;
+use Rector\Php55\Rector\ClassConstFetch\StaticToSelfOnFinalClassRector;
+use Rector\Php84\Rector\MethodCall\NewMethodCallWithoutParenthesesRector;
+use Rector\Php84\Rector\Param\ExplicitNullableParamTypeRector;
+use Rector\TypeDeclaration\Rector\ClassLike\AddVoidReturnTypeWhereNoReturnRector;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use ReflectionClass;
+use ReflectionProperty;
+use Valkyrja\Rector\CodingStyle\Rector\Stmt\RemoveNonConflictingAliasInUseStatementRector;
+use Valkyrja\Rector\Php83\Rector\ClassMethod\AddOverrideAttributeToOverriddenMethodsRector;
 use Valkyrja\Rector\Rules;
 use Valkyrja\Rector\Tests\Abstract\RectorTestCase;
 
@@ -59,6 +72,29 @@ final class RulesTest extends RectorTestCase
     public function testGetConfigReturnsConfigBuilder(): void
     {
         self::assertInstanceOf(RectorConfigBuilder::class, Rules::getConfig());
+    }
+
+    public function testGetConfigConfiguresExactlyTheseRules(): void
+    {
+        $rules = new ReflectionProperty(RectorConfigBuilder::class, 'rules')->getValue(Rules::getConfig());
+
+        self::assertSame(
+            [
+                AddVoidReturnTypeWhereNoReturnRector::class,
+                AddOverrideAttributeToOverriddenMethodsRector::class,
+                ConvertStaticToSelfRector::class,
+                ExplicitNullableParamTypeRector::class,
+                NewMethodCallWithoutParenthesesRector::class,
+                RemoveNonConflictingAliasInUseStatementRector::class,
+                RemoveParentCallWithoutParentRector::class,
+                RemoveUselessAliasInUseStatementRector::class,
+                RemoveUselessParamTagRector::class,
+                RemoveUselessReturnTagRector::class,
+                SeparateMultiUseImportsRector::class,
+                StaticToSelfOnFinalClassRector::class,
+            ],
+            $rules
+        );
     }
 
     public function testGetConfigCreatesACacheDirectoryThatBelongsToOneProject(): void

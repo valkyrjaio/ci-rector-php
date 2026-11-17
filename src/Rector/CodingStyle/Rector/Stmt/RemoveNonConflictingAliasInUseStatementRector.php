@@ -29,9 +29,9 @@ use PhpParser\Node\Stmt\Use_;
 use PhpParser\NodeFinder;
 use Rector\PhpParser\Node\FileNode;
 use Rector\Rector\AbstractRector;
-use Symplify\RuleDocGenerator\Exception\PoorDocumentationException;
-use Symplify\RuleDocGenerator\ValueObject\CodeSample\CodeSample;
-use Symplify\RuleDocGenerator\ValueObject\RuleDefinition;
+use Rector\RuleDoc\CodeSample\CodeSample;
+use Rector\RuleDoc\Exception\PoorDocumentationException;
+use Rector\RuleDoc\RuleDefinition;
 
 use function array_filter;
 use function count;
