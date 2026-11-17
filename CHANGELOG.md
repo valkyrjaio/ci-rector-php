@@ -1,6 +1,13 @@
 # Release Notes for 26.x
 
-## [Unreleased](https://github.com/valkyrjaio/rector/compare/v26.3.78...26.x)
+## [Unreleased](https://github.com/valkyrjaio/rector/compare/v26.3.79...26.x)
+
+## [v26.3.79](https://github.com/valkyrjaio/rector/compare/v26.3.78...v26.3.79) - 2026-11-16
+
+* [Dependency] build: Update composer dependencies by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-rector-php/pull/349
+* [Workflow] ci: Update .github workflow refs to v26.26.5 by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-rector-php/pull/351
+* [Rector] fix: Fork the Override attribute rule by [@MelechMizrachi](https://github.com/MelechMizrachi) in https://github.com/valkyrjaio/ci-rector-php/pull/353
+* [Dependency] build: Update composer dependencies by [@valkyrja-volundr](https://github.com/valkyrja-volundr)[bot] in https://github.com/valkyrjaio/ci-rector-php/pull/354
 
 ## [v26.3.78](https://github.com/valkyrjaio/rector/compare/v26.3.77...v26.3.78) - 2026-10-25
 
