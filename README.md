@@ -90,18 +90,18 @@ across multiple worker processes.
 
 #### Built-in Rules
 
-| Rule                                            | Description                                                                                      |
-| ----------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| `AddVoidReturnTypeWhereNoReturnRector`          | Adds `: void` return type to methods that have no `return` statement                             |
-| `ConvertStaticToSelfRector`                     | Converts `static::` to `self::` inside non-final classes where late static binding is not needed |
-| `ExplicitNullableParamTypeRector`               | Converts `?Type` param declarations to `Type\|null` union syntax                                 |
-| `NewMethodCallWithoutParenthesesRector`         | Removes unnecessary parentheses from `new` expressions used directly in method chains (PHP 8.4)  |
-| `RemoveParentCallWithoutParentRector`           | Removes `parent::method()` calls when no parent class exists                                     |
-| `RemoveUselessAliasInUseStatementRector`        | Removes aliases in `use` statements where the alias matches the class's own short name           |
-| `RemoveUselessParamTagRector`                   | Removes `@param` PHPDoc tags whose type is already expressed in the signature                    |
-| `RemoveUselessReturnTagRector`                  | Removes `@return` PHPDoc tags whose type is already expressed in the signature                   |
-| `SeparateMultiUseImportsRector`                 | Splits `use A, B;` into individual `use A; use B;` statements                                    |
-| `StaticToSelfOnFinalClassRector`                | Converts `static::` to `self::` inside final classes                                             |
+| Rule                                     | Description                                                                                      |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `AddVoidReturnTypeWhereNoReturnRector`   | Adds `: void` return type to methods that have no `return` statement                             |
+| `ConvertStaticToSelfRector`              | Converts `static::` to `self::` inside non-final classes where late static binding is not needed |
+| `ExplicitNullableParamTypeRector`        | Converts `?Type` param declarations to `Type\|null` union syntax                                 |
+| `NewMethodCallWithoutParenthesesRector`  | Removes unnecessary parentheses from `new` expressions used directly in method chains (PHP 8.4)  |
+| `RemoveParentCallWithoutParentRector`    | Removes `parent::method()` calls when no parent class exists                                     |
+| `RemoveUselessAliasInUseStatementRector` | Removes aliases in `use` statements where the alias matches the class's own short name           |
+| `RemoveUselessParamTagRector`            | Removes `@param` PHPDoc tags whose type is already expressed in the signature                    |
+| `RemoveUselessReturnTagRector`           | Removes `@return` PHPDoc tags whose type is already expressed in the signature                   |
+| `SeparateMultiUseImportsRector`          | Splits `use A, B;` into individual `use A; use B;` statements                                    |
+| `StaticToSelfOnFinalClassRector`         | Converts `static::` to `self::` inside final classes                                             |
 
 #### Custom Rules
 
@@ -126,9 +126,9 @@ The rule skips a method in each of these cases:
 
 Two options change what the rule adds the attribute to:
 
-| Option                        | Effect                                                                                                                                                             |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `ADD_TO_INTERFACE_METHODS`    | Also adds the attribute to a method that implements an interface method                                                                                            |
+| Option                        | Effect                                                                                                                                                            |
+| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ADD_TO_INTERFACE_METHODS`    | Also adds the attribute to a method that implements an interface method                                                                                           |
 | `ALLOW_OVERRIDE_EMPTY_METHOD` | Also adds the attribute when the parent method is abstract, empty, or a default, when an abstract trait method declares it, and to `__toString` from `Stringable` |
 
 `Rules::getConfig()` uses neither option.
