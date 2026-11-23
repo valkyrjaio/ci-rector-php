@@ -26,5 +26,5 @@ final class RectorInfo
      *
      * @var non-empty-string
      */
-    public const string VERSION_BUILD_DATE_TIME = 'November 22 2026 11:10:47 MST';
+    public const string VERSION_BUILD_DATE_TIME = 'November 23 2026 15:22:09 MST';
 }
